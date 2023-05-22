@@ -121,7 +121,7 @@ app.post('/create', (req, res) => {
 
 app.get('/leffat', (req, res) => {
   try {
-    res.status(200).json(leffat); // Send the 'leffat' array in the response body
+    res.status(200).json(leffat);
   } catch (error) {
     res.status(500).json({
       message: 'Kaikkien elokuvien haku epäonnistui.',
@@ -139,7 +139,7 @@ app.get('/leffat/:leffaID', (req, res) => {
         message: 'Elokuvaa ei löytynyt.',
       });
     }
-    res.status(200).json(leffa); // Send the 'leffa' object in the response body
+    res.status(200).json(leffa);
   } catch (error) {
     res.status(500).json({
       message: 'Elokuvaa ei löytynyt.',
