@@ -42,53 +42,52 @@ const SearchBar = () => {
   };
 
   const handleModify = (id) => {
-    // Find the movie with the specified ID
     const movieToModify = results.find((movie) => movie.id === id);
     if (movieToModify) {
-      // Prompt the user to enter new values
-      const newId = prompt('Enter the new ID:', movieToModify.id);
-      const newTitle = prompt('Enter the new title:', movieToModify.Title);
+      // Kysy käyttäjältä uudet tiedot
+      const newId = prompt('Uusi ID:', movieToModify.id);
+      const newTitle = prompt('Uusi elokuvan nimi:', movieToModify.Title);
       const newDirector = prompt(
-        'Enter the new director name:',
+        'Uusi ohjaajan nimi:',
         movieToModify.Director
       );
 
-      // Create a new movie object with the updated values
+      // Luo uusi elokuva päivitetyillä tiedoilla
       const updatedMovie = {
         id: newId,
         Title: newTitle,
         Director: newDirector,
       };
 
-      // Find the index of the movie to be modified
+      
       const movieIndex = results.findIndex((movie) => movie.id === id);
 
-      // Create a new array with the modified movie
+      // Luo uusi lista päivitetyillä tiedoilla
       const updatedResults = [
         ...results.slice(0, movieIndex),
         updatedMovie,
         ...results.slice(movieIndex + 1),
       ];
 
-      // Update the results with the modified array
+      // Päivitä listä uusilla tiedoilla
       setResults(updatedResults);
     }
   };
 
   const handleAdd = () => {
-    // Prompt the user to enter new values for the movie
-    const id = prompt('Enter the ID:');
-    const title = prompt('Enter the title:');
-    const director = prompt('Enter the director name:');
+    // Kysy käyttäjältä uudet tiedot elokuvalle
+    const id = prompt('Syötä ID:');
+    const title = prompt('Elokuvan nimi:');
+    const director = prompt('Ohjaajan nimi:');
 
-    // Create a new movie object with the entered values
+    // Luo uusi elokuva uusilla tiedoilla
     const newMovie = {
       id: id,
       Title: title,
       Director: director,
     };
 
-    // Update the results array with the new movie
+    // Päivitä lista uusilla tiedoilla
     const updatedResults = [...results, newMovie];
     setResults(updatedResults);
   };
