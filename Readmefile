@@ -3,3 +3,7 @@ sekä nappula, jota painamalla saa esiin kaiken elokuvadatan jota on saatavilla.
 saa lisättyä uuden elokuvan. Kun käyttäjä lisää tai muokkaa elokuvadataa, tulee sivun yläosaan prompt ikkuna, joka pyytää käyttäjältä tarvittavat tiedot.
 
 Sovellus toimii lokaalisti, mutta ei netlifyn kautta. Sain sen sinne kuitenkin laitettua, mutta mitään dataa en saanut esille. 
+
+
+
+Netlify linkki : https://646ac0a53ced690008ea0b2b--adorable-dolphin-a1563c.netlify.app/
