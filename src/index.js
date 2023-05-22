@@ -19,7 +19,7 @@ const SearchBar = () => {
   };
 
   const searchMovies = () => {
-    fetch(`http://localhost:8080/leffat?title=${query}`)
+    fetch(`https://jonneilomaki.github.io/REACTSOVELUS/${query}`)
       .then((response) => response.json())
       .then((data) => {
         console.log('Hakutulokset: ', data);
@@ -28,7 +28,7 @@ const SearchBar = () => {
   };
 
   const GetMovieData = () => {
-    fetch('http://localhost:8080/leffat')
+    fetch('https://jonneilomaki.github.io/REACTSOVELUS/')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
